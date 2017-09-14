@@ -65,7 +65,17 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+    
+    for (int i =0; i < myObject2.size(); i++) {
+        float distance = ofDist(x,y, myObject2[i].x, myObject2[i].y); // a method oF gives us to check the distance between two coordinates
+        
+        if (distance < myObject2[i].dim) {
+            myObject2.erase(myObject2.begin()+i); // we need to use an iterator/ reference to the vector position we want to delete
+        }
+    }
+    
+    myObject2.clear();
+    
 }
 
 //--------------------------------------------------------------
