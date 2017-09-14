@@ -21,6 +21,10 @@ void ofApp::update(){
         myObject[i].update();
     }
     
+    for (int i = 0; i<myObject2.size(); i++) {
+        myObject2[i].update();
+    }
+    
 }
 
 //--------------------------------------------------------------
@@ -30,6 +34,9 @@ void ofApp::draw(){
         myObject[i].draw();
     }
     
+    for (int i = 0 ; i<myObject2.size(); i++) {
+        myObject2[i].draw();
+    }
 }
 
 //--------------------------------------------------------------
@@ -49,7 +56,11 @@ void ofApp::mouseMoved(int x, int y ){
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-
+    
+    Object tempBall;							// create the ball object
+    tempBall.setup(x,y, ofRandom(10,40));	// setup its initial state
+    myObject2.push_back(tempBall);				// add it to the vector
+    
 }
 
 //--------------------------------------------------------------

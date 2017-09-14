@@ -24,6 +24,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
         Object myObject[NOBJECTS];
+        vector <Object> myObject2;
     
 
 };
