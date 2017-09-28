@@ -21,7 +21,7 @@ void Object::setup(float _x, float _y, int _dim){
     speedX = ofRandom(-1, 1);
     speedY = ofRandom(-1, 1);
     
-    color.set(ofRandom(255));
+    color.set(0,ofRandom(100),ofRandom(100));
     
 }
 
