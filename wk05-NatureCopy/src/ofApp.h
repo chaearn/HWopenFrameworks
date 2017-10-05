@@ -1,7 +1,6 @@
 #pragma once
 
 #include "ofMain.h"
-#include "Mover.h"
 
 class ofApp : public ofBaseApp{
 
@@ -22,9 +21,9 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    float xpos;
-    float currentValue;
-    float targetValue;
+        float position;
+    float add;
+
     
-    Mover myMove;
+		
 };

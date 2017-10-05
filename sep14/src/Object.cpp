@@ -54,4 +54,5 @@ void Object::draw(){
     ofSetColor(color);
     ofDrawCircle(x, y, dim);
     
+    
 }
