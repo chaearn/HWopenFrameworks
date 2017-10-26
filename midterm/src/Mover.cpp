@@ -51,11 +51,12 @@ void Mover::draw()
 {
 	ofPushStyle();
 	float hue = ofMap(mass, 1, 10, 100, 150);
-	ofSetColor( ofColor::fromHsb(hue, hue, 250) );
+	ofSetColor( ofColor::fromHsb(hue, hue, 250, 50) );
 	
-//    ofDrawLine(pos, pos+2);
+    
 //    ofDrawRectangle(pos, mass, mass);
     ofDrawCircle(pos, mass);
+//    ofDrawLine(pos, pos+2);
 	
 	ofPopStyle();
 }
