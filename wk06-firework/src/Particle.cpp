@@ -36,12 +36,12 @@ void Particle::update(float timeDiff){ // how much time has passed since last fr
 
 void Particle::draw(){
 	ofPushStyle();
-//    float hue = ofMap(lifespan, 0., 3., 0, 255);
-    float random = ofMap(lifespan, 0, 3, 0, 255);
-    ofSetColor(random, random, random);
-//    ofSetColor(ofColor::fromHsb(hue,random,hue));
+    float hue = ofMap(lifespan, 0., 3., 0, 255);
+//    float random = ofMap(lifespan, 0, 3, 0, 255);
+//    ofSetColor(random, random, random);
+    ofSetColor(ofColor::fromHsb(hue,hue,hue));
 	
-	ofDrawCircle(pos, (ofGetMouseY()/100));
+	ofDrawEllipse(pos, (ofGetMouseX()/100),(ofGetMouseY()/100));
 	ofPopStyle();
 }
 

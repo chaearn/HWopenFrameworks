@@ -10,7 +10,7 @@
 
 ParticleSystem::ParticleSystem(ofVec3f _pos){
 	pos = _pos;
-	lifespan = 10.;
+	lifespan = 5.;
 }
 
 void ParticleSystem::update(ofVec3f force, float timeDiff){ // time elapsed since last frame
