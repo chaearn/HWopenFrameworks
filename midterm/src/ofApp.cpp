@@ -183,21 +183,22 @@ void ofApp::update(){
 void ofApp::draw(){
 
 	// draw the incoming, the grayscale, the bg and the thresholded difference
-	ofSetHexColor(0xffffff);
-//    colorImg.draw(0,0,1024,768);
-//	grayImage.draw(360,20);
+//    ofSetHexColor(0xffffff);
+   
+    grayImage.draw(0,0,1024,768);
 //	grayBg.draw(20,280);
 //	grayDiff.draw(360,280);
 
 	// then draw the contours:
 
-	ofFill();
-	ofSetColor(27,28,40);
-    ofDrawRectangle(0,0,1024,768);
+//    ofFill();
+//    ofSetColor(27,28,40,30);
+//    ofDrawRectangle(0,0,1024,768);
+//    colorImg.draw(0,0,1024,768);
 //	ofSetHexColor(0xffffff);
 
 //    we could draw the whole contour finder
-//    contourFinder.draw(0,0,1024,768);
+    contourFinder.draw(0,0,1024,768);
     
     ///////////////////////
     /////////MOVERS////////
@@ -219,7 +220,7 @@ void ofApp::draw(){
     {
         Att[i].draw();
     }
-        
+    
     
 //    att.pos = initialPos;
 //    att.mass = 15.0;
@@ -255,14 +256,14 @@ void ofApp::draw(){
     
 
 	// finally, a report:
-	ofSetHexColor(0xffffff);
-	stringstream reportStr;
-	reportStr << "bg subtraction and blob detection" << endl
-			  << "press ' ' to capture bg" << endl
-			  << "threshold " << threshold << " (press: +/-)" << endl
-			  << "num blobs found " << contourFinder.nBlobs << ", fps: " << ofGetFrameRate();
-	ofDrawBitmapString(reportStr.str(), 20, 700);
-    
+//    ofSetHexColor(0xffffff);
+//    stringstream reportStr;
+//    reportStr << "bg subtraction and blob detection" << endl
+//              << "press ' ' to capture bg" << endl
+//              << "threshold " << threshold << " (press: +/-)" << endl
+//              << "num blobs found " << contourFinder.nBlobs << ", fps: " << ofGetFrameRate();
+//    ofDrawBitmapString(reportStr.str(), 20, 700);
+//    
     //mover
     
 
